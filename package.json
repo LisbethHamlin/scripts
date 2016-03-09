@@ -1,0 +1,15 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "description": "LisbethHamlin.github.io scripts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LisbethHamlin/scripts.git"
+  },
+  "author": "Bryce Mehring",
+  "license": "MIT",
+  "devDependencies": {
+    "gm": "^1.21.1",
+    "image-size": "^0.4.0"
+  }
+}
