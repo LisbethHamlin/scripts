@@ -24,8 +24,8 @@ function createThumbnail(file) {
 }
 
 if(!root) {
-	console.log('Specify a file or directory');
-	return;
+  console.log('Specify a file or directory');
+  return;
 }
 
 let isFile = null;
@@ -43,13 +43,13 @@ catch(e) {
 if(isDirectory) {
   let results = [];
   common.walk(root, results, function(error) {
-  	if(error) {
-  		throw error;
-  	}
+    if(error) {
+      throw error;
+    }
 
     results = results.filter(function(value) {
-  		return value.search(TEASER_IMAGE_PATTERN) === -1;
-  	});
+      return value.search(TEASER_IMAGE_PATTERN) === -1;
+    });
 
     results.forEach(createThumbnail);
   });
