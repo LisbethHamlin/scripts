@@ -26,7 +26,7 @@ if(!rootDirectory) {
   return;
 }
 
-rootDirectory += 'images/portfolio';
+rootDirectory += '/images/portfolio';
 rootDirectory = rootDirectory.replace(/\\/g, '/');
 
 let results = [];
@@ -42,11 +42,12 @@ common.walk(rootDirectory, results, function(error) {
   const portfolio = {};
   results.forEach(function(value) {
     const splitValues = splitPath(value),
-          group = splitValues.slice(-2)[0];
+          group = splitValues.slice(-2)[0],
+          title = splitValues.slice(-1)[0];
 
     portfolio[group] = portfolio[group] || [];
     portfolio[group].push({
-      title: removeExtension(splitValues.slice(-1)[0]),
+      title: removeExtension(title),
       size: getImageSize(value)
     });
   });
