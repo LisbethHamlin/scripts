@@ -11,5 +11,9 @@
   "devDependencies": {
     "gm": "^1.21.1",
     "image-size": "^0.4.0"
+  },
+  "scripts": {
+    "createThumbnails": "node src/create_thumbnails.js",
+    "exportImageData": "node src/export_image_data.js"
   }
 }
